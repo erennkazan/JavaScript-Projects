@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boyama Oyunu</title>
+    <style type="text/css">
+      #selected {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid black;
+      }
+      #colors {
+        display: flex;
+        gap: 10px;
+      }
+      #colors > div {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      width="220"
+      height="383"
+      viewBox="0 0 220 383"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        id="rocket-body"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M115.869 2C94.1586 16.3862 76.1834 36.3587 64.1556 59.4594C42.5224 101.009 41.2126 152.561 60.7081 195.155C45.3816 207.739 31.804 222.449 20.4865 238.732C15.1647 246.389 10.3179 254.437 6.90061 263.113C3.48328 271.789 1.52451 281.139 2.09949 290.446C2.63322 299.086 5.37293 307.58 9.98776 314.903C14.6026 322.226 21.083 328.362 28.6463 332.572C24.5905 316.35 26.1977 298.769 33.1276 283.551C37.7181 273.47 44.9438 264.143 54.9621 259.418C60.8574 256.638 67.5486 255.571 74.0163 256.379C80.484 257.188 86.7066 259.869 91.7361 264.015L128.51 264.014C133.858 258.496 141.171 254.921 148.81 254.09C156.45 253.259 164.36 255.179 170.769 259.418C179.543 265.222 185.092 274.882 188.484 284.84C193.62 299.919 194.441 316.442 190.826 331.956C204.651 323.589 214.537 308.991 217.175 293.047C218.73 283.652 217.863 273.944 215.351 264.758C212.839 255.573 208.714 246.885 203.792 238.732C193.43 221.572 179.43 206.62 162.986 195.155C181.725 152.888 181.295 102.55 161.837 60.6086C151.294 37.8851 135.426 17.6531 115.869 2V2Z"
+        fill="white"
+        stroke="black"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M74.329 41.2518C69.8623 47.082 65.7631 53.1706 62.0996 59.4949C33.8465 108.269 41.6562 189.269 58.5019 220.321C75.3475 251.372 90.8673 263.972 90.8673 263.972H129.224C129.224 263.972 148.226 250.424 165.185 219.171C182.145 187.917 189.251 109.673 163.985 60.6429C160.548 53.973 156.669 47.5164 152.402 41.3026C142.015 49.3481 127.995 53.8637 113.383 53.8701C98.7491 53.8574 84.7136 49.3225 74.329 41.2518V41.2518Z"
+        fill="white"
+        stroke="black"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M89.8943 265.868C82.2645 278.044 77.7492 292.154 76.8927 306.498C75.2072 334.722 88.4502 363.415 111.022 380.444C131.339 361.285 142.397 332.718 140.275 304.873C139.259 291.526 135.351 278.408 128.899 266.681L89.8943 265.868V265.868Z"
+        fill="white"
+        stroke="black"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M89.8942 265.868C88.5402 273.394 88.8193 281.21 90.7068 288.621C93.7523 300.577 101.065 311.4 111.022 318.687C119.283 311.445 125.31 301.688 128.086 291.059C130.158 283.127 130.438 274.733 128.899 266.681L89.8942 265.868V265.868Z"
+        fill="white"
+        stroke="black"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M127.712 256.992H91.9572C87.4694 256.992 83.8313 260.631 83.8313 265.118C83.8313 269.606 87.4694 273.244 91.9572 273.244H127.712C132.199 273.244 135.838 269.606 135.838 265.118C135.838 260.631 132.199 256.992 127.712 256.992Z"
+        fill="white"
+        stroke="black"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M111.444 136.041C123.663 136.041 133.568 125.75 133.568 113.055C133.568 100.36 123.663 90.0693 111.444 90.0693C99.2256 90.0693 89.3203 100.36 89.3203 113.055C89.3203 125.75 99.2256 136.041 111.444 136.041Z"
+        fill="white"
+        stroke="black"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <div id="selected"></div>
+    <div id="colors"></div>
+    <input id="picker" type="color" />
+    <button id="clear">Temizle</button>
+    <script>
+       const colors = ["violet","indigo","blue","green","yellow","orange","red"];
+       let selectedColor = "white";
+
+        function setColor(color){
+            selectedColor = color;
+            document.getElementById("selected").style.backgroundColor= color;
+        }
+
+       for(let i=0; i<colors.length; i++){
+          const newColor = document.createElement("div"); 
+          newColor.style.backgroundColor = colors[i];
+          newColor.addEventListener("click", function(){
+            setColor(colors[i]);
+          });
+          document.getElementById("colors").appendChild(newColor);
+        }
+
+       const items =  document.getElementsByTagName("path");
+        for(let i=0; i<items.length; i++){
+            items[i].addEventListener("click",function(e){
+            e.currentTarget.setAttribute("fill", selectedColor);    
+        });
+        }
+        document.getElementById("picker").addEventListener("change",function(e){
+            setColor(e.currentTarget.value);
+        });
+        document.getElementById("clear").addEventListener("click",function(e){
+            for(let i=0; i<items.length; i++){
+            items[i].setAttribute("fill", "white");
+            }
+        });
+
+    </script>
+  </body>
+</html>
