@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <div class="content">
+    <div class="left-area" id="left-area">
+      <div class="first-card" id="first-card">
+        <img class="logo card-item" src="/images/card-logo.svg" alt="">
+        <h1 class="number card-item">
+          <span class="number1">0000</span>
+          <span class="number2">0000</span>
+          <span class="number3">0000</span>
+          <span class="number4">0000</span>
+        </h1>
+        <div class="card-info">
+          <!-- <span class="name card-item" id="cardname">Cardholder Name</span> -->
+          <!-- <span class="date card-item" >00/00</span> -->
+        </div>
+      </div>
+      <div class="second-card">
+        <span class="cvc">000</span>
+      </div>
+   </div>
+   <div class="right-area">
+    <form action="" id="form">
+      <label class="holder-name" for="fname">CARDHOLDER NAME</label><br>
+      <input class="card-name" type="text" id="fname" name="fname" placeholder="e.g. Jane Appleseed"><br><br>
+      <label for="cnumber">CARD NUMBER</label><br>
+      <input class="card-name" type="text" id="cnumber" name="cnumber" placeholder="e.g. 1234 5678 9123 0000"><br><br>
+      <label for="">Exp. Date (MM/YY)</label>
+      <label class="text-cvc" for="">CVC</label><br>
+      <input class="month" type="text" placeholder="MM">
+      <input class="month" type="text" placeholder="YY">
+      <input class="eg" type="text" placeholder="e.g. 123"><br>
+      <input class="btn" type="submit" name="" id="" value="Confirm">
+    </form>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

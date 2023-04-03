@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content{
+    background:url(images/bg-main-desktop.png) no-repeat;
+    height: 100vh;
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+}
+.left-area{
+    padding-top: 170px;
+}
+.first-card{
+    width: 500px;
+    height: 250px;
+    background: url(images/bg-card-front.png) no-repeat;
+    margin-left: 170px;
+}
+.card-item{
+    margin: 20px;
+    color: #fff;
+}
+.number{
+    font-size: 2.3em;
+}
+.card-info{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.second-card{
+    width: 450px;
+    background: url(images/bg-card-back.png) no-repeat;
+    height: 250px;
+    position: relative;
+    margin-left: 250px;
+    margin-top: 50px;
+}
+.cvc{
+    position: absolute;
+    left: auto;
+    top: 45%;
+    right: 60px;
+    color: #fff;
+}
+.right-area{
+    margin-top: 300px;
+    margin-left: 200px;
+    height: 400px;
+}
+label{
+    color: rgb(54, 44, 102);
+    font-weight: bold;
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
+}
+.card-name{
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 300px;
+    height: 40px;
+    padding-left: 7px;
+    letter-spacing: 0.1em;
+}
+.month{
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 70px;
+    height: 40px;
+    padding-left: 12px;
+}
+.eg{
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 152px;
+    height: 40px;
+    padding-left: 12px;
+}
+.btn{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(54, 44, 102);
+    margin-top: 30px;
+}
+.text-cvc{
+    padding-left: 30px;
+}
+input{
+    border:none;
+}
+
+input:focus, textarea:focus
+{
+    border: 1px solid #ca7a2f;
+    box-shadow: 0 0 3px #ca7a2f;
+    outline-offset: 0px;
+    outline: none;
+}
+@media (max-width: 576px) { 
+    .content{
+        background:url(images/bg-main-mobile.png) no-repeat;
+        margin: auto;
+        width: 400px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+    .left-area{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        width: 500px;
+        height: 700px;
+        padding: 0;
+        margin-top: 50px;
+    }
+    .second-card{
+        width: 230px;
+        height: 140px;
+        background: url(images/bg-card-back.png) no-repeat;
+        background-size: 230px 140px;
+        margin-top: -20px;
+        margin-left: 90px;
+        display: flex;
+        justify-content: center;
+        align-self: flex-start;
+    }
+    .first-card{
+        width: 400px;
+        height: 140px;
+        background: url(images/bg-card-front.png) no-repeat;
+        background-size: 230px 140px;
+        margin-top: -50px;
+        margin-left: 50px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+    .number{
+        font-size: 1em;
+    }
+    .number1, .number2, .number3, .number4
+    {
+        padding-left: 5px;
+        letter-spacing: 0.1em;
+    }
+    .name{
+        padding-bottom: 50px;
+    }
+    .date{
+        padding-right: 170px;
+    }
+    .logo{
+        width: 40px;
+        height: 40px;
+    }
+    .right-area{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        width: 375px;
+        margin: auto;
+        padding-bottom: 100px;
+    }
+}
