@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <style type="text/css">
+        body{
+            display: flex;
+            background-color: #0c091d;
+        }
+        svg{
+            margin: auto;
+        }
+        .small-lines{
+            stroke: rgba(169,114,255,0.5);
+        }
+        .big-lines{
+            stroke: #a972ff;
+        }
+        .akrep{
+            transform-origin: 400px 400px;
+        }
+        .yelkovan{
+            transform-origin: 400px 400px;
+        }
+        .second{
+            transform-origin: 400px 400px;
+        }
+        /* #numbers{
+            position: relative;
+            width: 800px;
+            height: 800px;
+        } */
+        .text{
+            position: fixed;
+            font-size: 30px;
+            color: #fff;
+            
+        }
+    </style>
+</head>
+<body>
+    <svg width="800" height="800">
+        <circle 
+        class="small-lines"
+        cx="400" 
+        cy="400" 
+        r="365"
+        stroke-dasharray="2,36.2"
+        stroke-width="20" 
+        fill="none">
+    </circle>
+    <circle 
+    class="big-lines"
+    cx="400" 
+    cy="400" 
+    r="350"
+    stroke-dasharray="8,175.1666"
+    stroke-width="50" 
+    fill="none">
+</circle>
+<line class="second" x1="400" y1="400" x2="400" y2="50" stroke="red"></line>
+<line class="yelkovan" x1="400" y1="400" x2="400" y2="150" stroke="#E81c6f" stroke-width="5" ></line>
+<line class="akrep" x1="400" y1="400" x2="400" y2="250" stroke="#E81c6f" stroke-width="10" ></line>
+
+</svg> 
+<div id="numbers"></div>
+    <script>
+       
+        let numbersDiv = document.getElementById("numbers");
+       
+
+        for(let i=0; i<12; i++){
+            let numberDiv = document.createElement("div");
+            numberDiv.classList.add("text");
+            numberDiv.innerText =i + 1;
+            let ang = (((i + 1) * 30 - 90 ) / 180)* Math.PI;
+            numberDiv.style.left = `${Math.cos(ang)* 300 + 400}px`;
+            numberDiv.style.top = `${Math.sin(ang)* 300 + 400}px`;
+            numbersDiv.appendChild(numberDiv);
+        }
+
+        function timeFnc(){
+            let now = new Date();
+            let akrep = document.querySelector(".akrep");
+            akrep.style = `transform: rotate(${now.getHours() * 30}deg)`;
+            let yelkovan = document.querySelector(".yelkovan");
+            yelkovan.style = `transform: rotate(${now.getMinutes() * 6}deg)`;
+            let second = document.querySelector(".second");
+            second.style = `transform: rotate(${now.getSeconds() * 6}deg)`;
+            console.log(akrep);
+            console.log(now.getHours());
+            console.log(now.getMinutes());
+        }
+        setInterval(timeFnc, 1000);
+        timeFnc();
+    </script>
+</body>
+</html>
